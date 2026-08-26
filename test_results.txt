@@ -1,0 +1,401 @@
+﻿
+> smart-hospital-backend@0.0.1 test:e2e
+> jest --config ./test/jest-e2e.json
+
+node.exe : [31m[Nest] 16168  - [39m26/08/2026, 4:34:49 pm [31m  ERROR[39m [38;5;3m[RedisService] [39m[31mRedis 
+error[39m
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([31m[Nest] 161...edis error[39m:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[31m[Nest] 16168  - [39m26/08/2026, 4:34:49 pm [31m  ERROR[39m [38;5;3m[RedisService] [39mAggregateError: 
+[90m    at internalConnectMultiple (node:net:1194:18)[39m
+[90m    at afterConnectMultiple (node:net:1784:7)[39m {
+  code: [32m'ECONNREFUSED'[39m,
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:6379
+    [90m    at createConnectionError (node:net:1747:14)[39m
+    [90m    at afterConnectMultiple (node:net:1777:16)[39m {
+      errno: [33m-4078[39m,
+      code: [32m'ECONNREFUSED'[39m,
+      syscall: [32m'connect'[39m,
+      address: [32m'::1'[39m,
+      port: [33m6379[39m
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:6379
+    [90m    at createConnectionError (node:net:1747:14)[39m
+    [90m    at afterConnectMultiple (node:net:1777:16)[39m {
+      errno: [33m-4078[39m,
+      code: [32m'ECONNREFUSED'[39m,
+      syscall: [32m'connect'[39m,
+      address: [32m'127.0.0.1'[39m,
+      port: [33m6379[39m
+    }
+  ]
+}
+PASS test/app.e2e-spec.ts
+[31m[Nest] 20548  - [39m26/08/2026, 4:34:49 pm [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mAggregateError: 
+    at [90mC:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4mpg-pool[24m\index.js:45:11
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at PrismaPgAdapter.startTransaction [90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\
+[4m@prisma\adapter-pg[24m\dist\index.js:744:18[90m)[39m
+    at gr.#i [90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@prisma\client-engine-r
+untime[24m\src\transaction-manager\transaction-manager.ts:219:33[90m)[39m
+    at gr.startTransaction [90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@prisma\c
+lient-engine-runtime[24m\src\transaction-manager\transaction-manager.ts:141:12[90m)[39m
+    at e.startTransaction [90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@prisma\cl
+ient[24m\src\runtime\core\engines\client\LocalExecutor.ts:93:18[90m)[39m
+    at yr.transaction [90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@prisma\client
+[24m\src\runtime\core\engines\client\ClientEngine.ts:448:18[90m)[39m
+    at Proxy._transactionWithCallback [90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[
+4m@prisma\client[24m\src\runtime\getPrismaClient.ts:849:16[90m)[39m
+    at AuthController.register 
+[90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39msrc\auth\auth.controller.ts:18:20[90m)[39m
+    at [90mC:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@nestjs\core[24m\router\route
+r-execution-context.js:55:62
+    at [90mC:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@nestjs\core[24m\router\route
+r-proxy.js:9:17 {
+  code: [32m'ECONNREFUSED'[39m,
+  [errors]: [
+    Error: connect ECONNREFUSED ::1:5432
+    [90m    at createConnectionError (node:net:1747:14)[39m
+    [90m    at afterConnectMultiple (node:net:1777:16)[39m {
+      errno: [33m-4078[39m,
+      code: [32m'ECONNREFUSED'[39m,
+      syscall: [32m'connect'[39m,
+      address: [32m'::1'[39m,
+      port: [33m5432[39m
+    },
+    Error: connect ECONNREFUSED 127.0.0.1:5432
+    [90m    at createConnectionError (node:net:1747:14)[39m
+    [90m    at afterConnectMultiple (node:net:1777:16)[39m {
+      errno: [33m-4078[39m,
+      code: [32m'ECONNREFUSED'[39m,
+      syscall: [32m'connect'[39m,
+      address: [32m'127.0.0.1'[39m,
+      port: [33m5432[39m
+    }
+  ]
+}
+[31m[Nest] 20548  - [39m26/08/2026, 4:34:49 pm [31m  ERROR[39m [38;5;3m[ExceptionsHandler] 
+[39mPrismaClientKnownRequestError: 
+Invalid `this.prisma.user.findUnique()` invocation in
+C:\Users\jaiga\Projects\smart-hospital-shared-backened\src\auth\auth.service.ts:84:37
+
+  81 
+  82 let user: any = null;
+  83 if (dto.email) {
+ΓåÆ 84   user = await this.prisma.user.findUnique(
+
+    at vn.handleRequestError [90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@prisma
+\client[24m\src\runtime\RequestHandler.ts:238:13[90m)[39m
+    at vn.handleAndLogRequestError [90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@
+prisma\client[24m\src\runtime\RequestHandler.ts:184:12[90m)[39m
+    at vn.request [90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@prisma\client[24
+m\src\runtime\RequestHandler.ts:153:12[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at a [90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@prisma\client[24m\src\run
+time\getPrismaClient.ts:1014:24[90m)[39m
+    at AuthService.login 
+[90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39msrc\auth\auth.service.ts:84:14[90m)[39m
+    at AuthController.login 
+[90m(C:\Users\jaiga\Projects\smart-hospital-shared-backened\[39msrc\auth\auth.controller.ts:37:20[90m)[39m
+    at [90mC:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@nestjs\core[24m\router\route
+r-execution-context.js:55:62
+    at [90mC:\Users\jaiga\Projects\smart-hospital-shared-backened\[39mnode_modules\[4m@nestjs\core[24m\router\route
+r-proxy.js:9:17 {
+  code: [32m'ECONNREFUSED'[39m,
+  meta: {
+    modelName: [32m'User'[39m
+  },
+  clientVersion: [32m'7.10.0'[39m
+}
+FAIL test/integration.e2e-spec.ts
+  ΓùÅ Console
+
+    console.log
+      Test 3 Failed! Status: 401 Body: {
+        "message": "Invalid or expired access token",
+        "error": "Unauthorized",
+        "statusCode": 401
+      }
+
+      at Object.<anonymous> (integration.e2e-spec.ts:141:15)
+
+    console.log
+      Admin token used: undefined
+
+      at Object.<anonymous> (integration.e2e-spec.ts:142:15)
+
+    console.log
+      Test 6 Failed! Status: 401 Body: {
+        "message": "Invalid or expired access token",
+        "error": "Unauthorized",
+        "statusCode": 401
+      }
+
+      at Object.<anonymous> (integration.e2e-spec.ts:271:15)
+
+    console.log
+      IDs used: {
+        hospitalId: undefined,
+        departmentId: undefined,
+        doctorId: undefined,
+        serviceId: undefined,
+        patientId: undefined
+      }
+
+      at Object.<anonymous> (integration.e2e-spec.ts:272:15)
+
+  ΓùÅ Smart Hospital Integration Flow (e2e) ΓÇ║ 1. Register test users and promote admin
+
+    expected 201 "Created", got 500 "Internal Server Error"
+
+    [0m [90m 78 |[39m         gender[33m:[39m [32m'MALE'[39m[33m,[39m
+     [90m 79 |[39m       })
+    [31m[1m>[22m[39m[90m 80 |[39m       [33m.[39mexpect([35m201[39m)[33m;[39m
+     [90m    |[39m        [31m[1m^[22m[39m
+     [90m 81 |[39m
+     [90m 82 |[39m     expect(resPatient[33m.[39mbody[33m.[39msuccess)[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 83 |[39m[0m
+
+      at Object.<anonymous> (integration.e2e-spec.ts:80:8)
+      ----
+      at Test._assertStatus (../node_modules/supertest/lib/test.js:309:14)
+      at ../node_modules/supertest/lib/test.js:365:13
+      at Test._assertFunction (../node_modules/supertest/lib/test.js:342:13)
+      at Test.assert (../node_modules/supertest/lib/test.js:195:23)
+      at localAssert (../node_modules/supertest/lib/test.js:138:14)
+      at Server.<anonymous> (../node_modules/supertest/lib/test.js:152:11)
+
+  ΓùÅ Smart Hospital Integration Flow (e2e) ΓÇ║ 2. Login to retrieve access tokens
+
+    expected 200 "OK", got 500 "Internal Server Error"
+
+    [0m [90m 109 |[39m       [33m.[39mpost([32m'/api/v1/auth/login'[39m)
+     [90m 110 |[39m       [33m.[39msend({ email[33m:[39m patientEmail[33m,[39m password[33m:[39m 
+[32m'password123'[39m })
+    [31m[1m>[22m[39m[90m 111 |[39m       [33m.[39mexpect([35m200[39m)[33m;[39m
+     [90m     |[39m        [31m[1m^[22m[39m
+     [90m 112 |[39m
+     [90m 113 |[39m     patientToken [33m=[39m 
+resPatLogin[33m.[39mbody[33m.[39mdata[33m.[39maccessToken[33m;[39m
+     [90m 114 |[39m     patientId [33m=[39m 
+resPatLogin[33m.[39mbody[33m.[39mdata[33m.[39muser[33m.[39mpatientProfile[33m.[39mid[33m;[39m[0m
+
+      at Object.<anonymous> (integration.e2e-spec.ts:111:8)
+      ----
+      at Test._assertStatus (../node_modules/supertest/lib/test.js:309:14)
+      at ../node_modules/supertest/lib/test.js:365:13
+      at Test._assertFunction (../node_modules/supertest/lib/test.js:342:13)
+      at Test.assert (../node_modules/supertest/lib/test.js:195:23)
+      at localAssert (../node_modules/supertest/lib/test.js:138:14)
+      at Server.<anonymous> (../node_modules/supertest/lib/test.js:152:11)
+
+  ΓùÅ Smart Hospital Integration Flow (e2e) ΓÇ║ 3. Admin configures Hospital, Department, and Service
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 201
+    Received: 401
+
+    [0m [90m 143 |[39m     }
+     [90m 144 |[39m
+    [31m[1m>[22m[39m[90m 145 |[39m     expect(resHosp[33m.[39mstatus)[33m.[39mtoBe([35m201[39m)[33m;[39m
+     [90m     |[39m                            [31m[1m^[22m[39m
+     [90m 146 |[39m
+     [90m 147 |[39m     hospitalId [33m=[39m resHosp[33m.[39mbody[33m.[39mdata[33m.[39mid[33m;[39m
+     [90m 148 |[39m     expect(hospitalId)[33m.[39mtoBeDefined()[33m;[39m[0m
+
+      at Object.<anonymous> (integration.e2e-spec.ts:145:28)
+
+  ΓùÅ Smart Hospital Integration Flow (e2e) ΓÇ║ 4. Admin registers a Doctor and configures schedule
+
+    expected 201 "Created", got 401 "Unauthorized"
+
+    [0m [90m 201 |[39m         departmentIds[33m:[39m [departmentId][33m,[39m
+     [90m 202 |[39m       })
+    [31m[1m>[22m[39m[90m 203 |[39m       [33m.[39mexpect([35m201[39m)[33m;[39m
+     [90m     |[39m        [31m[1m^[22m[39m
+     [90m 204 |[39m
+     [90m 205 |[39m     doctorId [33m=[39m resDoc[33m.[39mbody[33m.[39mdata[33m.[39mid[33m;[39m
+     [90m 206 |[39m     expect(doctorId)[33m.[39mtoBeDefined()[33m;[39m[0m
+
+      at Object.<anonymous> (integration.e2e-spec.ts:203:8)
+      ----
+      at Test._assertStatus (../node_modules/supertest/lib/test.js:309:14)
+      at ../node_modules/supertest/lib/test.js:365:13
+      at Test._assertFunction (../node_modules/supertest/lib/test.js:342:13)
+      at Test.assert (../node_modules/supertest/lib/test.js:195:23)
+      at localAssert (../node_modules/supertest/lib/test.js:138:14)
+      at Server.<anonymous> (../node_modules/supertest/lib/test.js:152:11)
+
+  ΓùÅ Smart Hospital Integration Flow (e2e) ΓÇ║ 5. Admin registers a Staff member
+
+    expected 201 "Created", got 401 "Unauthorized"
+
+    [0m [90m 230 |[39m         role[33m:[39m [33mRole[39m[33m.[39m[33mRECEPTIONIST[39m[33m,[39m
+     [90m 231 |[39m       })
+    [31m[1m>[22m[39m[90m 232 |[39m       [33m.[39mexpect([35m201[39m)[33m;[39m
+     [90m     |[39m        [31m[1m^[22m[39m
+     [90m 233 |[39m
+     [90m 234 |[39m     [36mconst[39m staffProfile [33m=[39m 
+resStaff[33m.[39mbody[33m.[39mdata[33m.[39mprofile[33m;[39m
+     [90m 235 |[39m     expect(staffProfile)[33m.[39mtoBeDefined()[33m;[39m[0m
+
+      at Object.<anonymous> (integration.e2e-spec.ts:232:8)
+      ----
+      at Test._assertStatus (../node_modules/supertest/lib/test.js:309:14)
+      at ../node_modules/supertest/lib/test.js:365:13
+      at Test._assertFunction (../node_modules/supertest/lib/test.js:342:13)
+      at Test.assert (../node_modules/supertest/lib/test.js:195:23)
+      at localAssert (../node_modules/supertest/lib/test.js:138:14)
+      at Server.<anonymous> (../node_modules/supertest/lib/test.js:152:11)
+
+  ΓùÅ Smart Hospital Integration Flow (e2e) ΓÇ║ 6. Patient books an appointment and verifies double-booking check
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 201
+    Received: 401
+
+    [0m [90m 273 |[39m     }
+     [90m 274 |[39m
+    [31m[1m>[22m[39m[90m 275 |[39m     expect(resAppt[33m.[39mstatus)[33m.[39mtoBe([35m201[39m)[33m;[39m
+     [90m     |[39m                            [31m[1m^[22m[39m
+     [90m 276 |[39m
+     [90m 277 |[39m     appointmentId [33m=[39m resAppt[33m.[39mbody[33m.[39mdata[33m.[39mid[33m;[39m
+     [90m 278 |[39m     expect(appointmentId)[33m.[39mtoBeDefined()[33m;[39m[0m
+
+      at Object.<anonymous> (integration.e2e-spec.ts:275:28)
+
+  ΓùÅ Smart Hospital Integration Flow (e2e) ΓÇ║ 7. Patient check-in and queue placement
+
+    expected 201 "Created", got 401 "Unauthorized"
+
+    [0m [90m 298 |[39m       [33m.[39m[36mset[39m([32m'Authorization'[39m[33m,[39m [32m`Bearer 
+${patientToken}`[39m)
+     [90m 299 |[39m       [33m.[39msend({ appointmentId })
+    [31m[1m>[22m[39m[90m 300 |[39m       [33m.[39mexpect([35m201[39m)[33m;[39m
+     [90m     |[39m        [31m[1m^[22m[39m
+     [90m 301 |[39m
+     [90m 302 |[39m     expect(resCheckIn[33m.[39mbody[33m.[39msuccess)[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 303 |[39m     
+expect(resCheckIn[33m.[39mbody[33m.[39mdata[33m.[39mqueueEntry)[33m.[39mtoBeDefined()[33m;[39m[0m
+
+      at Object.<anonymous> (integration.e2e-spec.ts:300:8)
+      ----
+      at Test._assertStatus (../node_modules/supertest/lib/test.js:309:14)
+      at ../node_modules/supertest/lib/test.js:365:13
+      at Test._assertFunction (../node_modules/supertest/lib/test.js:342:13)
+      at Test.assert (../node_modules/supertest/lib/test.js:195:23)
+      at localAssert (../node_modules/supertest/lib/test.js:138:14)
+      at Server.<anonymous> (../node_modules/supertest/lib/test.js:152:11)
+
+  ΓùÅ Smart Hospital Integration Flow (e2e) ΓÇ║ 8. Verify patient journey initialized and steps state query
+
+    expected 200 "OK", got 401 "Unauthorized"
+
+    [0m [90m 312 |[39m       [33m.[39m[36mget[39m([32m`/api/v1/appointments/${appointmentId}/journey`[39m)
+     [90m 313 |[39m       [33m.[39m[36mset[39m([32m'Authorization'[39m[33m,[39m [32m`Bearer 
+${patientToken}`[39m)
+    [31m[1m>[22m[39m[90m 314 |[39m       [33m.[39mexpect([35m200[39m)[33m;[39m
+     [90m     |[39m        [31m[1m^[22m[39m
+     [90m 315 |[39m
+     [90m 316 |[39m     expect(resJourney[33m.[39mbody[33m.[39msuccess)[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 317 |[39m     expect(resJourney[33m.[39mbody[33m.[39mdata[33m.[39mstatus)[33m.[39mtoBe([32m'IN_PRO
+GRESS'[39m)[33m;[39m[0m
+
+      at Object.<anonymous> (integration.e2e-spec.ts:314:8)
+      ----
+      at Test._assertStatus (../node_modules/supertest/lib/test.js:309:14)
+      at ../node_modules/supertest/lib/test.js:365:13
+      at Test._assertFunction (../node_modules/supertest/lib/test.js:342:13)
+      at Test.assert (../node_modules/supertest/lib/test.js:195:23)
+      at localAssert (../node_modules/supertest/lib/test.js:138:14)
+      at Server.<anonymous> (../node_modules/supertest/lib/test.js:152:11)
+
+  ΓùÅ Smart Hospital Integration Flow (e2e) ΓÇ║ 9. Staff operates the queue: calls, starts, and completes care
+
+    expected 201 "Created", got 401 "Unauthorized"
+
+    [0m [90m 326 |[39m       
+[33m.[39mpost([32m`/api/v1/hospitals/${hospitalId}/queues/${queueId}/call-next`[39m)
+     [90m 327 |[39m       [33m.[39m[36mset[39m([32m'Authorization'[39m[33m,[39m [32m`Bearer 
+${staffToken}`[39m)
+    [31m[1m>[22m[39m[90m 328 |[39m       [33m.[39mexpect([35m201[39m)[33m;[39m
+     [90m     |[39m        [31m[1m^[22m[39m
+     [90m 329 |[39m
+     [90m 330 |[39m     expect(resCall[33m.[39mbody[33m.[39mdata[33m.[39mstatus)[33m.[39mtoBe([33mQueueEntry
+Status[39m[33m.[39m[33mCALLED[39m)[33m;[39m
+     [90m 331 |[39m     [36mconst[39m entryId [33m=[39m 
+resCall[33m.[39mbody[33m.[39mdata[33m.[39mid[33m;[39m[0m
+
+      at Object.<anonymous> (integration.e2e-spec.ts:328:8)
+      ----
+      at Test._assertStatus (../node_modules/supertest/lib/test.js:309:14)
+      at ../node_modules/supertest/lib/test.js:365:13
+      at Test._assertFunction (../node_modules/supertest/lib/test.js:342:13)
+      at Test.assert (../node_modules/supertest/lib/test.js:195:23)
+      at localAssert (../node_modules/supertest/lib/test.js:138:14)
+      at Server.<anonymous> (../node_modules/supertest/lib/test.js:152:11)
+
+  ΓùÅ Smart Hospital Integration Flow (e2e) ΓÇ║ 10. Admin queries analytics metrics
+
+    expected 200 "OK", got 401 "Unauthorized"
+
+    [0m [90m 352 |[39m       
+[33m.[39m[36mget[39m([32m`/api/v1/hospitals/${hospitalId}/analytics/dashboard`[39m)
+     [90m 353 |[39m       [33m.[39m[36mset[39m([32m'Authorization'[39m[33m,[39m [32m`Bearer 
+${adminToken}`[39m)
+    [31m[1m>[22m[39m[90m 354 |[39m       [33m.[39mexpect([35m200[39m)[33m;[39m
+     [90m     |[39m        [31m[1m^[22m[39m
+     [90m 355 |[39m
+     [90m 356 |[39m     
+expect(resAnalytics[33m.[39mbody[33m.[39msuccess)[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m 357 |[39m     expect(resAnalytics[33m.[39mbody[33m.[39mdata[33m.[39mtotalAppointments)[33m.[39mtoBe
+([35m1[39m)[33m;[39m[0m
+
+      at Object.<anonymous> (integration.e2e-spec.ts:354:8)
+      ----
+      at Test._assertStatus (../node_modules/supertest/lib/test.js:309:14)
+      at ../node_modules/supertest/lib/test.js:365:13
+      at Test._assertFunction (../node_modules/supertest/lib/test.js:342:13)
+      at Test.assert (../node_modules/supertest/lib/test.js:195:23)
+      at localAssert (../node_modules/supertest/lib/test.js:138:14)
+      at Server.<anonymous> (../node_modules/supertest/lib/test.js:152:11)
+
+
+  ΓùÅ Test suite failed to run
+
+    PrismaClientKnownRequestError: 
+    Invalid `prisma.user.deleteMany()` invocation in
+    C:\Users\jaiga\Projects\smart-hospital-shared-backened\test\integration.e2e-spec.ts:58:23
+
+      55   await prisma.hospital.delete({ where: { id: hospitalId } });
+      56 }
+      57 // Clean up users
+    ΓåÆ 58 await prisma.user.deleteMany(
+
+    [0m [90m 56 |[39m     }
+     [90m 57 |[39m     [90m// Clean up users[39m
+    [31m[1m>[22m[39m[90m 58 |[39m     [36mawait[39m prisma[33m.[39muser[33m.[39mdeleteMany({
+     [90m    |[39m     [31m[1m^[22m[39m
+     [90m 59 |[39m       where[33m:[39m {
+     [90m 60 |[39m         email[33m:[39m {
+     [90m 61 |[39m           [36min[39m[33m:[39m [patientEmail[33m,[39m adminEmail[33m,[39m 
+doctorEmail[33m,[39m staffEmail][33m,[39m[0m
+
+      at vn.handleRequestError (../node_modules/@prisma/client/src/runtime/RequestHandler.ts:238:13)
+      at vn.handleAndLogRequestError (../node_modules/@prisma/client/src/runtime/RequestHandler.ts:184:12)
+      at vn.request (../node_modules/@prisma/client/src/runtime/RequestHandler.ts:153:12)
+      at a (../node_modules/@prisma/client/src/runtime/getPrismaClient.ts:1014:24)
+      at Object.<anonymous> (integration.e2e-spec.ts:58:5)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       10 failed, 1 passed, 11 total
+Snapshots:   0 total
+Time:        4.297 s, estimated 7 s
+Ran all test suites.
